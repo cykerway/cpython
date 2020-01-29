@@ -539,7 +539,7 @@ class HelpFormatter(object):
     def _format_action_invocation(self, action):
         if not action.option_strings:
             default = self._get_default_metavar_for_positional(action)
-            return ', '.join(self._metavar_formatter(action, default)(1))
+            return ' '.join(self._metavar_formatter(action, default)(1))
 
         else:
             parts = []
@@ -709,7 +709,7 @@ def _get_action_name(argument):
         return  '/'.join(argument.option_strings)
     elif argument.metavar not in (None, SUPPRESS):
         if isinstance(argument.metavar, tuple):
-            return '(%s)' % ', '.join(argument.metavar)
+            return '%s' % ' '.join(argument.metavar)
         else:
             return argument.metavar
     elif argument.dest not in (None, SUPPRESS):

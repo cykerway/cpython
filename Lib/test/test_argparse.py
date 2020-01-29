@@ -3981,7 +3981,7 @@ class TestHelpTupleMetavarPositional(HelpTestCase):
     help = usage + '''\
 
         positional arguments:
-          bar, baz    foo help
+          bar baz     foo help
 
         optional arguments:
           -h, --help  show this help message and exit
