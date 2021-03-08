@@ -726,9 +726,9 @@ def _get_action_name(argument):
     elif argument.option_strings:
         return  '/'.join(argument.option_strings)
     elif argument.metavar not in (None, SUPPRESS):
-        if isinstance(argument.nargs, int):
-            if isinstance(argument.metavar, tuple):
-                return '%s' % ' '.join(argument.metavar)
+        if isinstance(argument.nargs, int) and \
+           isinstance(argument.metavar, tuple):
+            return ' '.join(argument.metavar)
         return argument.metavar
     elif argument.dest not in (None, SUPPRESS):
         return argument.dest
