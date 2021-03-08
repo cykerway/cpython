@@ -4145,7 +4145,7 @@ class TestHelpTupleMetavarPositional(HelpTestCase):
         positional arguments:
           bar baz     foo help
 
-        optional arguments:
+        options:
           -h, --help  show this help message and exit
         '''
     version = ''
